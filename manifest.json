@@ -1,0 +1,27 @@
+{
+    "name": "quick share",
+    "version": "1.1",
+    "description": "Quick share current link to facebook and line. Support auto paste selected text.",
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://use.fontawesome.com; object-src 'self'",
+    "browser_action": {
+        "default_title": "share",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "32": "images/logo-32.png",
+            "48": "images/logo-48.png",
+            "128": "images/logo-128.png"
+        }
+    },
+    "permissions": ["tabs", "activeTab", "contextMenus"],
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": [
+            "content/share.js"
+        ]
+    }],
+    "background": {
+        "scripts": ["util/handleShare.js", "event.js"],
+        "persistent": true
+    }
+}
