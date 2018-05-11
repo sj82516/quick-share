@@ -12,13 +12,14 @@ function setFBShareTextarea(text){
 
 // be careful, Line would insert the web link by default 
 function setLineShareTextarea(text){
-    let fbShareTextarea = document.getElementsByClassName("uiTextareaNoResize uiTextareaAutogrow input mentionsTextarea textInput")[0]
-    if(!fbShareTextarea){
+    let lineShareTextarea = document.querySelector(".MdTextarea01 textarea")
+    if(!lineShareTextarea){
         setTimeout(()=>{
             setLineShareTextarea(text)
         }, 100)
     }
-    fbShareTextarea.value = text;
+    text = text==''? text: (text+ "\n");
+    lineShareTextarea.value = text + lineShareTextarea.value;
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
