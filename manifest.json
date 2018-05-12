@@ -1,6 +1,6 @@
 {
     "name": "quick share",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Quick share current link to facebook and line. Support auto paste selected text.",
     "manifest_version": 2,
     "content_security_policy": "script-src 'self' https://use.fontawesome.com; object-src 'self'",
