@@ -4,8 +4,7 @@ document.getElementById('share-button__facebook').onclick = function () {
             currentWindow: true,
         },
         function (tabs) {
-            let fbShareURL = 'https://www.facebook.com/sharer/sharer.php?u=' + tabs[0].url;
-            handleShare("line", fbShareURL, "", {
+            handleShare("facebook", tabs[0].url, "test", {
                 width: tabs[0].width,
                 height: tabs[0].height
             });
@@ -19,8 +18,7 @@ document.getElementById('share-button__line').onclick = function () {
             currentWindow: true,
         },
         function (tabs) {
-            let lineShareURL = 'http://line.naver.jp/R/msg/text/?' + encodeURI(tabs[0].url);
-            handleShare("line", lineShareURL, "", {
+            handleShare("line", tabs[0].url, "test", {
                 width: tabs[0].width,
                 height: tabs[0].height
             });

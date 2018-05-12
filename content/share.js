@@ -7,7 +7,6 @@ function setFBShareTextarea(text){
         }, 100)
     }
     fbShareTextarea.value = text;
-
 }
 
 // be careful, Line would insert the web link by default 
@@ -27,11 +26,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         return false;
     }
     switch(message.factory){
-        case "facebook":
-            setFBShareTextarea(message.text);
-            break;
         case "line":
             setLineShareTextarea(message.text);
             break;
+        default:
+        case "facebook":
+            setFBShareTextarea(message.text);
     }
 })

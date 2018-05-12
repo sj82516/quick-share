@@ -7,4 +7,4 @@ Quick share current link to facebook and line. Support auto paste selected text.
 ![](./intro-images/intro-2.png)
 
 ## TODO
-Support right click.
+Directly share to some people.

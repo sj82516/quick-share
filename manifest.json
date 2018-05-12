@@ -13,6 +13,11 @@
             "128": "images/logo-128.png"
         }
     },
+    "icons": {
+        "32": "images/logo-32.png",
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
+    },
     "permissions": ["tabs", "activeTab", "contextMenus"],
     "content_scripts": [{
         "matches": ["*://*/*"],
