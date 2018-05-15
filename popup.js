@@ -4,7 +4,7 @@ document.getElementById('share-button__facebook').onclick = function () {
             currentWindow: true,
         },
         function (tabs) {
-            handleShare("facebook", tabs[0].url, "test", {
+            handleShare("facebook", tabs[0].url, "", {
                 width: tabs[0].width,
                 height: tabs[0].height
             });
@@ -18,7 +18,7 @@ document.getElementById('share-button__line').onclick = function () {
             currentWindow: true,
         },
         function (tabs) {
-            handleShare("line", tabs[0].url, "test", {
+            handleShare("line", tabs[0].url, "", {
                 width: tabs[0].width,
                 height: tabs[0].height
             });
